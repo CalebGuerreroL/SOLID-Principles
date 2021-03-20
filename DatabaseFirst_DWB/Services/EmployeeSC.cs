@@ -16,8 +16,8 @@ namespace DatabaseFirst_DWB.Services
 
         public void UpdateEmployeeFirstNameById(string newName, int id = 1)
         {
-            var filter = new EmployeeSC.EmployeeFilter();
-            var result = filter.FilterBy(GetAllEmployees(), new EmployeeSC.EmFilterId(id));
+            var filter = new EmployeeFilter();
+            var result = filter.FilterBy(new EmFilterId(id));
             var currentEmployee = result.ToList().FirstOrDefault();
 
             if (currentEmployee == null)
@@ -39,9 +39,9 @@ namespace DatabaseFirst_DWB.Services
 
         public class EmployeeFilter
         {
-            public IQueryable<Employee> FilterBy(IQueryable<Employee> employees, EmployeeFilterSpecification filter)
+            public IQueryable<Employee> FilterBy(EmployeeFilterSpecification filter)
             {
-                return filter.Filter(employees);
+                return filter.Filter(new EmployeeSC().GetAllEmployees());
             }
         }
 

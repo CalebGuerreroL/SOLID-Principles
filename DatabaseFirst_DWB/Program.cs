@@ -7,11 +7,10 @@ namespace DatabaseFirst_DWB
 {
     class Program
     {
-        public static EmployeeSC employeeSC = new();
         public static void SimpleSelect()
         {
 
-            var employeeQuery = employeeSC.GetAllEmployees().Select(s => s);
+            var employeeQuery = new EmployeeSC().GetAllEmployees().Select(s => s);
             var output = employeeQuery.ToList();
 
             output.ForEach(fe => Console.WriteLine($"Nombre: {fe.FirstName}"));
@@ -20,7 +19,7 @@ namespace DatabaseFirst_DWB
         public static void Extra1(string title)
         {
             var filter = new EmployeeSC.EmployeeFilter();
-            var result = filter.FilterBy(employeeSC.GetAllEmployees(), new EmployeeSC.EmFilterTitle(title));
+            var result = filter.FilterBy(new EmployeeSC.EmFilterTitle(title));
             var output = result.ToList();
 
             output.ForEach(fe => Console.WriteLine($"Nombre: {fe.FirstName}"));
@@ -28,13 +27,13 @@ namespace DatabaseFirst_DWB
 
         public static void Extra2(string newName, int id = 1)
         {
-            employeeSC.UpdateEmployeeFirstNameById(newName, id);
+            new EmployeeSC().UpdateEmployeeFirstNameById(newName, id);
         }
 
         public static void Extra3(string name)
         {
             var filter = new EmployeeSC.EmployeeFilter();
-            var result = filter.FilterBy(employeeSC.GetAllEmployees(), new EmployeeSC.EmFilterName(name));
+            var result = filter.FilterBy(new EmployeeSC.EmFilterName(name));
             var output = result.ToList();
 
             output.ForEach(fe => Console.WriteLine($"Nombre: {fe.FirstName}"));
