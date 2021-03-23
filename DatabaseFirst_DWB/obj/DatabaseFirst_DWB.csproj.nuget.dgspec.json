@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caleb\\Desktop\\SOLID-Principles\\DatabaseFirst_DWB\\DatabaseFirst_DWB.csproj": {}
+    "C:\\Users\\caleb\\SOLID-Principles\\DatabaseFirst_DWB\\DatabaseFirst_DWB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\caleb\\Desktop\\SOLID-Principles\\DatabaseFirst_DWB\\DatabaseFirst_DWB.csproj": {
+    "C:\\Users\\caleb\\SOLID-Principles\\DatabaseFirst_DWB\\DatabaseFirst_DWB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caleb\\Desktop\\SOLID-Principles\\DatabaseFirst_DWB\\DatabaseFirst_DWB.csproj",
+        "projectUniqueName": "C:\\Users\\caleb\\SOLID-Principles\\DatabaseFirst_DWB\\DatabaseFirst_DWB.csproj",
         "projectName": "DatabaseFirst_DWB",
-        "projectPath": "C:\\Users\\caleb\\Desktop\\SOLID-Principles\\DatabaseFirst_DWB\\DatabaseFirst_DWB.csproj",
+        "projectPath": "C:\\Users\\caleb\\SOLID-Principles\\DatabaseFirst_DWB\\DatabaseFirst_DWB.csproj",
         "packagesPath": "C:\\Users\\caleb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caleb\\Desktop\\SOLID-Principles\\DatabaseFirst_DWB\\obj\\",
+        "outputPath": "C:\\Users\\caleb\\SOLID-Principles\\DatabaseFirst_DWB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\caleb\\AppData\\Roaming\\NuGet\\NuGet.Config",

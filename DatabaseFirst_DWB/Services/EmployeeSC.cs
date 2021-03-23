@@ -29,9 +29,9 @@ namespace DatabaseFirst_DWB.Services
 
         public abstract class EmployeeFilterSpecification
         {
-            public IQueryable<Employee> Filter(IQueryable<Employee> employees)
+            public IQueryable<Employee> Filter()
             {
-                return ApplyFilter(employees);
+                return ApplyFilter(new EmployeeSC().GetAllEmployees());
             }
 
             protected abstract IQueryable<Employee> ApplyFilter(IQueryable<Employee> employees);
@@ -41,7 +41,7 @@ namespace DatabaseFirst_DWB.Services
         {
             public IQueryable<Employee> FilterBy(EmployeeFilterSpecification filter)
             {
-                return filter.Filter(new EmployeeSC().GetAllEmployees());
+                return filter.Filter();
             }
         }
 
